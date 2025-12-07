@@ -20,6 +20,34 @@
             color: #666;
             z-index: 10;
         }
+        /* Enhanced code block styling */
+        .reveal pre {
+            width: 100%;
+            font-size: 0.55em;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+        .reveal pre code {
+            padding: 20px;
+            max-height: 600px;
+            background: #282c34;
+            color: #abb2bf;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        .reveal code {
+            padding: 3px 8px;
+            background: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        /* Highlight.js theme customization */
+        .hljs-attr { color: #e06c75; }
+        .hljs-string { color: #98c379; }
+        .hljs-number { color: #d19a66; }
+        .hljs-literal { color: #56b6c2; }
+        .hljs-keyword { color: #c678dd; }
     </style>
 </head>
 <body>
@@ -63,24 +91,76 @@
                 <p class="fragment">Total Annual Earnings: $12.1M</p>
             </section>
 
-            <!-- Code Sample -->
+            <!-- Code Sample - Python -->
             <section>
-                <h2>Data Analysis Code</h2>
-                <pre><code class="python" data-line-numbers="1-2|4,6-7|9">
+                <h2>Data Analysis Code (Python)</h2>
+                <pre><code class="python" data-line-numbers="1-3|5-6|8-9|11-13">
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
-# Load quarterly data
+# Load quarterly earnings data
 data = pd.read_csv('earnings.csv')
 
-# Calculate growth rate
+# Calculate growth rate and metrics
 data['growth'] = data['earnings'].pct_change()
+data['roi'] = (data['earnings'] / data['investment']) * 100
 
-# Plot earnings trend
-plt.plot(data['quarter'], data['earnings'])
-plt.title('Quarterly Earnings Trend')
+# Create professional visualization
+sns.set_style('whitegrid')
+plt.figure(figsize=(12, 6))
+plt.plot(data['quarter'], data['earnings'], marker='o', linewidth=2)
+plt.title('Quarterly Earnings Trend', fontsize=16, fontweight='bold')
+plt.xlabel('Quarter')
+plt.ylabel('Earnings ($M)')
+plt.grid(True, alpha=0.3)
 plt.show()
                 </code></pre>
+                <p style="font-size: 14px; margin-top: 15px;">✓ Syntax highlighted with line number animations</p>
+            </section>
+
+            <!-- Code Sample - SQL -->
+            <section>
+                <h2>Financial Data Query (SQL)</h2>
+                <pre><code class="sql" data-line-numbers="1-2|4-8|10-12">
+SELECT * FROM quarterly_earnings
+WHERE fiscal_year = 2025;
+
+SELECT 
+    quarter,
+    SUM(revenue) as total_revenue,
+    AVG(profit_margin) as avg_margin,
+    COUNT(*) as transaction_count
+FROM earnings_data
+GROUP BY quarter
+HAVING total_revenue > 2000000
+ORDER BY quarter DESC;
+                </code></pre>
+                <p style="font-size: 14px; margin-top: 15px;">✓ Database queries with color-coded syntax</p>
+            </section>
+
+            <!-- Code Sample - JavaScript -->
+            <section>
+                <h2>Financial Calculation (JavaScript)</h2>
+                <pre><code class="javascript" data-line-numbers="1-5|7-11|13-15">
+// Calculate Return on Investment (ROI)
+function calculateROI(profit, investment) {
+    const roi = (profit / investment) * 100;
+    return roi.toFixed(2);
+}
+
+// Calculate Compound Annual Growth Rate (CAGR)
+function calculateCAGR(startValue, endValue, years) {
+    const cagr = (Math.pow(endValue / startValue, 1 / years) - 1) * 100;
+    return cagr.toFixed(2);
+}
+
+// Example usage
+const q1Profit = 2500000;
+const investment = 10000000;
+console.log(`ROI: ${calculateROI(q1Profit, investment)}%`);
+                </code></pre>
+                <p style="font-size: 14px; margin-top: 15px;">✓ Interactive code examples</p>
             </section>
 
             <!-- Mathematical Equations -->
