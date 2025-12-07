@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Earnings Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>Quarterly Earnings Report</h1>
+                <p>Presented by: 21f3001699@ds.study.iitm.ac.in</p>
+                <p>Financial Institution Technical Consultant</p>
+            </section>
+
+            <!-- Markdown Slide -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Key Financial Metrics
+
+                    - **Revenue Growth**: 15% increase
+                    - **Profit Margin**: 22%
+                    - **Market Share**: 12.5%
+
+                    ---
+
+                    ## Challenges Faced
+
+                    - Market volatility
+                    - Regulatory changes
+                    - Competitive pressures
+                </textarea>
+            </section>
+
+            <!-- Animated Fragments -->
+            <section>
+                <h2>Earnings Breakdown</h2>
+                <ul>
+                    <li class="fragment">Q1: $2.5M</li>
+                    <li class="fragment">Q2: $3.1M</li>
+                    <li class="fragment fade-up">Q3: $2.8M</li>
+                    <li class="fragment">Q4: $3.5M</li>
+                </ul>
+                <p class="fragment">Total Annual Earnings: $12.1M</p>
+            </section>
+
+            <!-- Code Sample -->
+            <section>
+                <h2>Data Analysis Code</h2>
+                <pre><code class="python" data-line-numbers="1-2|4,6-7|9">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load quarterly data
+data = pd.read_csv('earnings.csv')
+
+# Calculate growth rate
+data['growth'] = data['earnings'].pct_change()
+
+# Plot earnings trend
+plt.plot(data['quarter'], data['earnings'])
+plt.title('Quarterly Earnings Trend')
+plt.show()
+                </code></pre>
+            </section>
+
+            <!-- Mathematical Equations -->
+            <section>
+                <h2>Financial Formulas</h2>
+                <p>Return on Investment (ROI):</p>
+                \[ ROI = \frac{Net\ Profit}{Investment} \times 100 \]
+                <p>Compound Interest:</p>
+                \[ A = P(1 + \frac{r}{n})^{nt} \]
+                <p>Where A is the amount, P is principal, r is rate, n is compounding frequency, t is time.</p>
+            </section>
+
+            <!-- Speaker Notes -->
+            <section>
+                <h2>Future Projections</h2>
+                <p>Expected growth in next quarter: 18%</p>
+                <aside class="notes">
+                    Speaker notes: Emphasize the positive trend. Mention that the growth is driven by new market entries. Be prepared to discuss risk factors if asked.
+                </aside>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes],
+            math: {
+                mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+            }
+        });
+    </script>
+</body>
+</html>
