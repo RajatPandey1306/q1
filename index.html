@@ -20,34 +20,63 @@
             color: #666;
             z-index: 10;
         }
-        /* Enhanced code block styling */
+        /* Enhanced code block styling with professional theme */
         .reveal pre {
-            width: 100%;
+            width: 95%;
             font-size: 0.55em;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 8px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
             margin: 20px auto;
+            border: 2px solid #1e1e1e;
         }
         .reveal pre code {
-            padding: 20px;
-            max-height: 600px;
-            background: #282c34;
-            color: #abb2bf;
+            padding: 25px;
+            max-height: 650px;
+            background: #1e1e1e;
+            color: #d4d4d4;
             border-radius: 8px;
-            line-height: 1.5;
+            line-height: 1.6;
+            font-family: 'Courier New', monospace;
+            font-weight: 500;
         }
         .reveal code {
-            padding: 3px 8px;
-            background: rgba(27, 31, 35, 0.05);
-            border-radius: 3px;
+            padding: 4px 10px;
+            background: rgba(27, 31, 35, 0.08);
+            border-radius: 4px;
             font-size: 0.9em;
+            color: #e74c3c;
+            font-weight: 600;
         }
-        /* Highlight.js theme customization */
-        .hljs-attr { color: #e06c75; }
-        .hljs-string { color: #98c379; }
-        .hljs-number { color: #d19a66; }
-        .hljs-literal { color: #56b6c2; }
-        .hljs-keyword { color: #c678dd; }
+        /* Comprehensive Highlight.js syntax coloring */
+        .hljs-keyword { color: #569cd6; font-weight: bold; }
+        .hljs-built_in { color: #4ec9b0; }
+        .hljs-string { color: #ce9178; }
+        .hljs-number { color: #b5cea8; }
+        .hljs-attr { color: #9cdcfe; }
+        .hljs-literal { color: #569cd6; }
+        .hljs-function { color: #dcdcdc; }
+        .hljs-comment { color: #6a9955; font-style: italic; }
+        .hljs-title { color: #4ec9b0; }
+        .hljs-params { color: #d4d4d4; }
+        .hljs-property { color: #9cdcfe; }
+        /* Line number styling */
+        .hljs-ln-numbers { color: #858585; font-size: 0.9em; }
+        .hljs-ln-code { padding-left: 15px; }
+        /* Code block language badge */
+        .reveal pre::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: #569cd6;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
@@ -160,7 +189,31 @@ const q1Profit = 2500000;
 const investment = 10000000;
 console.log(`ROI: ${calculateROI(q1Profit, investment)}%`);
                 </code></pre>
-                <p style="font-size: 14px; margin-top: 15px;">✓ Interactive code examples</p>
+                <p style="font-size: 14px; margin-top: 15px;">✓ Interactive code examples with professional formatting</p>
+            </section>
+
+            <!-- Code Sample - JSON Configuration -->
+            <section>
+                <h2>Financial Data Configuration (JSON)</h2>
+                <pre><code class="json" data-line-numbers="1|2-7|8-13|14-19">
+{
+  "quarterly_report": {
+    "year": 2025,
+    "quarters": [
+      {"q": 1, "revenue": 2500000, "margin": 18.5},
+      {"q": 2, "revenue": 3100000, "margin": 21.2},
+      {"q": 3, "revenue": 2800000, "margin": 19.8},
+      {"q": 4, "revenue": 3500000, "margin": 23.1}
+    ],
+    "summary": {
+      "total_revenue": 12000000,
+      "avg_margin": 20.65,
+      "growth_rate": 15.2
+    }
+  }
+}
+                </code></pre>
+                <p style="font-size: 14px; margin-top: 15px;">✓ Fully highlighted JSON with structured data</p>
             </section>
 
             <!-- Mathematical Equations -->
